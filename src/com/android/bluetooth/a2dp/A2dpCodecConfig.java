@@ -343,5 +343,45 @@ class A2dpCodecConfig {
         assigned_codec_length = codecCount;
         return codecConfigArray;
     }
+    /************************************************
+     * Savitech LHDC EXT API -- START
+     ***********************************************/
+    int getLhdcCodecExtendApiVer(BluetoothDevice device,
+                                byte[] exApiVer) {
+        return mA2dpNativeInterface.getLhdcCodecExtendApiVer(device, exApiVer);
+    }
+
+    int setLhdcCodecExtendApiConfigAr(BluetoothDevice device,
+                                byte[] codecConfig) {
+        return mA2dpNativeInterface.setLhdcCodecExtendApiConfigAr(device, codecConfig);
+    }
+
+    int getLhdcCodecExtendApiConfigAr(BluetoothDevice device,
+                                byte[] codecConfig) {
+        return mA2dpNativeInterface.getLhdcCodecExtendApiConfigAr(device, codecConfig);
+    }    
+
+    int setLhdcCodecExtendApiConfigMeta(BluetoothDevice device,
+                                byte[] codecConfig) {
+        return mA2dpNativeInterface.setLhdcCodecExtendApiConfigMeta(device, codecConfig);
+    }
+
+    int getLhdcCodecExtendApiConfigMeta(BluetoothDevice device,
+                                byte[] codecConfig) {
+        return mA2dpNativeInterface.getLhdcCodecExtendApiConfigMeta(device, codecConfig);
+    }    
+
+    int getLhdcCodecExtendApiConfigA2dpCodecSpecific(BluetoothDevice device,
+                                byte[] codecConfig) {
+        return mA2dpNativeInterface.getLhdcCodecExtendApiConfigA2dpCodecSpecific(device, codecConfig);
+    }    
+
+    void setLhdcCodecExtendApiDataGyro2D(BluetoothDevice device,
+                                byte[] codecData) {
+        mA2dpNativeInterface.setLhdcCodecExtendApiDataGyro2D(device, codecData);
+    }
+    /************************************************
+     * Savitech LHDC EXT API -- END
+     ***********************************************/
 }
 
